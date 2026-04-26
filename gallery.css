@@ -1,0 +1,94 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+p {
+    text-align: center;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 15px;
+}
+
+.child img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 460px;
+}
+
+.child {
+    transition: 0.3s;
+}
+
+.child:hover {
+    transform: scale(1.05);
+    transition: 0.14s;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    text-decoration: underline;
+    color: rgb(1, 1, 145);
+}
+
+/* ===== TABLETS ===== */
+@media (max-width: 992px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .child img {
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+    .parent {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .child img {
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-top: 15px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 380px) {
+    .child img {
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
